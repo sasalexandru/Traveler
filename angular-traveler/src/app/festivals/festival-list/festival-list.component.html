@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<div>
+<table class="boxed">
+  <thead>
+
+
+  <th style="color: black"> Festival name</th>
+
+
+  <th>Festival Description</th>
+
+  <th>Photo</th>
+
+
+  </thead>
+  <tbody>
+
+  <tr *ngFor="let festival of festivals | paginate : {itemsPerPage: 5 , currentPage: p }" style="background-color: transparent ; color: black" >
+
+    <td hidden>{{festival.id}}</td>
+    <td>{{festival.festivalName}}</td>
+    <td>{{festival.festivalDescription}}</td>
+    <td><img class="thumbnail" [src]="getImage(festival.picByte)"></td>
+
+  </tr>
+  </tbody>
+</table>
+  <pagination-controls class="myPagination"
+                       (pageChange)="p = $event"
+                      >
+
+  </pagination-controls>
+
+
+
+
+</div>
+
+
+

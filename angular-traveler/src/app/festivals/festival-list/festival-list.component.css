@@ -1,0 +1,45 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+
+}
+
+td, th {
+  border: 2px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  color: black;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+img{
+  width: 400px;
+  heigth: 400px;
+}
+
+.thumbnail:hover {
+  position:relative;
+  width:450px;
+  height:auto;
+  display:block;
+  z-index:999;
+}
+.boxed {
+  border: 3px black;
+  padding: 15px;
+  background-clip: content-box;
+  background: white;
+}
+
+.myPagination /deep/ .ngx-pagination .current {
+  background: mediumseagreen;
+
+}
+
+:host /deep/ .ngx-pagination {
+  color: white;
+}

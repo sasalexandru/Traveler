@@ -1,0 +1,45 @@
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<html>
+<body>
+<div>
+
+  <table class="boxed">
+    <thead>
+
+    <th style="color: black"> Hotel name</th>
+
+    <th>Hotel Address</th>
+
+    <th>Hotel Description</th>
+
+    <th>Photo</th>
+
+    </thead>
+    <tbody>
+
+    <tr *ngFor="let place of places | paginate : {itemsPerPage: 5 , currentPage: p }" style="background-color: transparent ; color: black" >
+
+      <td hidden>{{place.id}}</td>
+      <td>{{place.placeName}}</td>
+      <td>{{place.placeAddress}}</td>
+      <td>{{place.placeDescription}}</td>
+      <td><img class="thumbnail" [src]="getImage(place.picByte)"></td>
+
+
+    </tr>
+    </tbody>
+  </table>
+  <pagination-controls class="myPagination"
+                       (pageChange)="p = $event"
+  >
+
+  </pagination-controls>
+</div>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<div>
+  <div class="container; boxed">
+
+
+    <div class="form-group">
+      <div>
+        <input type="text" class="form-control" id="hotelName" placeholder="Hotel Name" [(ngModel)]="hotelName"
+               name="hotelName" />
+      </div>
+    </div>
+    <div class="form-group">
+      <div>
+        <input  type="text" class="form-control" id="address" placeholder="Hotel Address" [(ngModel)]="address"
+               name="address" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div>
+        <textarea style="height:200px;font-size:14pt;" type="text" class="form-control" id="hotelDescription" placeholder="Hotel Description" [(ngModel)]="hotelDescription"
+                  name="hotelDescription"> </textarea>
+<!--        <input style="height:200px;font-size:14pt;" type="text" class="form-control" id="hotelDescription" placeholder="Hotel Description" [(ngModel)]="hotelDescription"-->
+<!--               name="hotelDescription" />-->
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div>
+        <input  type="text" class="form-control" id="hotelUrl" placeholder="Hotel URL" [(ngModel)]="hotelURL"
+                name="hotelUrl" />
+      </div>
+    </div>
+    <!-- IMAGE UPLOAD -->
+
+    <div class="form-group">
+      <div>
+        <h1>Upload Image</h1>
+      </div>
+    </div>
+    <br>
+    <div class="form-group">
+      <div>
+        <input type="file" (change)="onFileChanged($event)">
+      </div>
+      <br>
+      <div>
+        <input type="button" class="btn btn-success" (click)="onUpload()" value="Make Romania great!">
+      </div>
+    </div>
+    <hr />
+    <div class="form-group">
+      <div>
+        <div *ngIf=message>{{message}}</div>
+      </div>
+    </div>
+    <div class="container row">
+      <div class="col-md-12">
+        <div *ngIf=retrievedImage>
+          <img [src]="retrievedImage">
+        </div>
+      </div>
+    </div>
+
+
+    <!-- IMAGE UPLOAD -->
+
+
+  </div>
+
+  <div [hidden]="!submitted">
+    <h2 style="text-align: center; color: whitesmoke">You suggested succesfully</h2>
+  </div>
+
+</div>
+
+
+
+

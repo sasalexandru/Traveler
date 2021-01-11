@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<html>
+<body>
+<div>
+
+<table class="boxed">
+  <thead>
+
+  <th style="color: black"> Hotel name</th>
+
+  <th>Hotel Address</th>
+
+  <th>Hotel Description</th>
+
+  <th>Photo</th>
+
+  </thead>
+  <tbody>
+
+  <tr *ngFor="let hotel of hotels | paginate : {itemsPerPage: 5 , currentPage: p }" style="background-color: transparent ; color: black" >
+
+    <td hidden>{{hotel.id}}</td>
+    <td>{{hotel.hotelName}}</td>
+    <td>{{hotel.address}}</td>
+    <td>{{hotel.hotelDescription}}</td>
+    <td><img class="thumbnail" [src]="getImage(hotel.picByte)"></td>
+
+
+
+    <td>
+      <button class="btn btn-primary" (click)="onClick(hotel)">{{hotel.hotelName}}</button>
+    </td>
+
+  </tr>
+  </tbody>
+</table>
+  <pagination-controls class="myPagination"
+                       (pageChange)="p = $event"
+  >
+
+  </pagination-controls>
+</div>
+</body>
+</html>
