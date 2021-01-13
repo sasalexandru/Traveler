@@ -11,6 +11,8 @@ import {HomeComponent} from "./home/home/home.component";
 import {CreateFestivalComponent} from "./suggest/create-festival/create-festival.component";
 import {CreateHotelComponent} from "./suggest/create-hotel/create-hotel.component";
 import {CreatePlaceComponent} from "./suggest/create-place/create-place.component";
+import {AboutComponent} from "./about/about.component";
+import {RestaurantsComponent} from "./restaurants/restaurants.component";
 
 const routes: Routes = [
   {path: 'user',  component: ListComponent},
@@ -24,6 +26,9 @@ const routes: Routes = [
   {path: 'suggest-festival', component: CreateFestivalComponent},
   {path: 'suggest-hotel', component: CreateHotelComponent},
   {path: 'suggest-place', component: CreatePlaceComponent},
+  {path: 'about', component: AboutComponent},
+  {path: 'restaurants', component: RestaurantsComponent},
+
 ];
 
 @NgModule({

@@ -3,9 +3,9 @@
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <div>
-  <div class="container; boxed">
+  <div class="container; boxed ; blurred">
 
-
+    <h1 class="demo-1">Suggest place to visit</h1>
     <div class="form-group">
       <div>
         <input type="text" class="form-control" id="placeN" placeholder="Place Name" [(ngModel)]="placeN"
@@ -30,7 +30,7 @@
 
     <div class="form-group">
       <div>
-        <h1>Upload Image</h1>
+        <h1 class="demo-1"  style="color: #00caa6">Upload Image</h1>
       </div>
     </div>
     <br>
@@ -40,7 +40,7 @@
       </div>
       <br>
       <div>
-        <input type="button" class="btn btn-success" (click)="onUpload()" value="Make Romania great!">
+        <input type="button" class="btn btn-success" (click)="onUpload()" value="Suggest great places!">
       </div>
     </div>
     <hr />

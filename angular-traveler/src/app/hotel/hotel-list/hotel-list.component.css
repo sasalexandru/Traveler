@@ -38,3 +38,6 @@ img{
   background: white;
 }
 
+.mycell {
+  max-width: 20px;
+}

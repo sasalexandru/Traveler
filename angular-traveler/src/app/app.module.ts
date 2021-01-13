@@ -21,6 +21,8 @@ import {NgxPaginationModule} from "ngx-pagination";
 import {BsDropdownModule} from "ngx-bootstrap/dropdown";
 import {TooltipModule} from "ngx-bootstrap/tooltip";
 import {ModalModule} from "ngx-bootstrap/modal";
+import { AboutComponent } from './about/about.component';
+import { RestaurantsComponent } from './restaurants/restaurants.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,9 @@ import {ModalModule} from "ngx-bootstrap/modal";
     CreateFestivalComponent,
     CreateHotelComponent,
     CreatePlaceComponent,
+    AboutComponent,
+    RestaurantsComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -46,7 +51,8 @@ import {ModalModule} from "ngx-bootstrap/modal";
     BrowserAnimationsModule,
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+
   ],
   providers: [],
   bootstrap: [AppComponent]

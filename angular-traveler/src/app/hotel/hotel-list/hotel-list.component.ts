@@ -6,6 +6,8 @@ import {HotelService} from "../../services/hotel/hotel.service";
 
 
 
+
+
 @Component({
   selector: 'app-hotel-list',
   templateUrl: './hotel-list.component.html',
@@ -17,6 +19,7 @@ export class HotelListComponent implements OnInit {
 
   hotels: Hotel[] = [];
   p?: string | number;
+
 
 
   constructor(public hotelService: HotelService , private router: Router) {
@@ -48,9 +51,6 @@ export class HotelListComponent implements OnInit {
     let newAddress =  address.replace(/\s/g, '+');
     console.log(newAddress);
   }
-
-
-
 
 
 }

@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
 img {
   width: 125px;
   height: 125px;
@@ -80,6 +82,7 @@ body{
   line-height: 1.2;
   font-size: 10vw;
   text-align: center;
+
 }
 .span-text {
   display: block;
@@ -88,6 +91,22 @@ body{
   text-align: center;
 
 }
+
+.soc-media {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.soc-media li {margin-right: 1em;}
+.soc-media a {
+  font-size: 1.5em;
+  text-decoration: none;
+  color: #fff;
+
+}
+
 
 
 

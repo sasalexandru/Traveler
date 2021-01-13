@@ -2,11 +2,11 @@
 <html lang="en">
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
+<script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?branch=experimental' async defer></script>
 <div>
-  <div class="container; boxed">
+  <div class="container; boxed ; blurred">
 
-
+        <h1 class="demo-1" >Suggest Festival</h1>
         <div class="form-group">
           <div>
             <input type="text" class="form-control" id="festivalN" placeholder="Festival Name" [(ngModel)]="festivalN"
@@ -25,7 +25,7 @@
 
           <div class="form-group">
             <div>
-              <h1>Upload Image</h1>
+              <h1 class="demo-1" style="color: #00caa6">Upload Image</h1>
             </div>
           </div>
           <br>
@@ -35,7 +35,7 @@
             </div>
             <br>
             <div>
-              <input  type="button" class="btn btn-success" (click)="onUpload()" value="Make Romania great!" >
+              <input  type="button" class="btn btn-success" (click)="onUpload()" value="Suggest great festivals!" >
             </div>
           </div>
           <hr />
@@ -54,7 +54,6 @@
 
 
           <!-- IMAGE UPLOAD -->
-
 
   </div>
 
