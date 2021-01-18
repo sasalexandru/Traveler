@@ -2,6 +2,7 @@ import {Component, HostListener, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {Place} from "../../models/place";
 import {PlaceService} from "../../services/place/place.service";
+import {DomSanitizer} from "@angular/platform-browser";
 
 
 
@@ -16,8 +17,10 @@ export class PlaceListComponent implements OnInit {
   noWrapSlides = false;
   p?: string | number;
 
+  trustedUrl: string = "https://www.google.com/maps/embed/v1/place?key=AIzaSyCxGFSxwWPA45GzvGZxSK2KlKD_AI7vK6c&q=" ;
 
-  constructor(public placeService: PlaceService, private router: Router) {
+  constructor(public placeService: PlaceService, private router: Router,private sanitizer: DomSanitizer) {
+    sanitizer.bypassSecurityTrustUrl(this.trustedUrl);
   }
 
 

@@ -12,6 +12,8 @@
 
     <th>Hotel Address</th>
 
+    <th>View on Map</th>
+
     <th>Hotel Description</th>
 
     <th>Photo</th>
@@ -24,6 +26,10 @@
       <td hidden>{{place.id}}</td>
       <td>{{place.placeName}}</td>
       <td>{{place.placeAddress}}</td>
+      <td>
+        <iframe  width="450" height="250" frameborder="0" style="border:0"
+                 [src]="this.sanitizer.bypassSecurityTrustResourceUrl(trustedUrl + place.placeAddress)"  allowfullscreen> </iframe>
+      </td>
       <td>{{place.placeDescription}}</td>
       <td><img class="thumbnail" [src]="getImage(place.picByte)"></td>
 

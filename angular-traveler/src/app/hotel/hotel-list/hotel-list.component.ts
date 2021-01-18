@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Hotel} from "../../models/hotel";
 import {Router} from "@angular/router";
 import {HotelService} from "../../services/hotel/hotel.service";
+import {DomSanitizer} from "@angular/platform-browser";
 
 
 
@@ -19,11 +20,18 @@ export class HotelListComponent implements OnInit {
 
   hotels: Hotel[] = [];
   p?: string | number;
+  address: string = "Str . Ciocarliei 47 , Cluj-Napoca";
+  addressList: string[];
 
 
 
-  constructor(public hotelService: HotelService , private router: Router) {
 
+  trustedUrl: string = "https://www.google.com/maps/embed/v1/place?key=AIzaSyCxGFSxwWPA45GzvGZxSK2KlKD_AI7vK6c&q=" ;
+
+
+
+  constructor(public hotelService: HotelService , private router: Router , private sanitizer: DomSanitizer) {
+     sanitizer.bypassSecurityTrustUrl(this.trustedUrl);
   }
 
   ngOnInit(): void {
@@ -32,6 +40,9 @@ export class HotelListComponent implements OnInit {
 
     });
   }
+
+
+
 
   List(hotel: Hotel) {
     this.hotels = this.hotels.filter((h:Hotel) => h.id != hotel.id);
@@ -49,6 +60,7 @@ export class HotelListComponent implements OnInit {
 
   replaceWhiteSpace(address: string){
     let newAddress =  address.replace(/\s/g, '+');
+    return this.sanitizer.bypassSecurityTrustUrl(newAddress);
     console.log(newAddress);
   }
 

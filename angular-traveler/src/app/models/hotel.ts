@@ -14,4 +14,7 @@ export class Hotel {
   get hotelUrl(): string {
     return this._hotelUrl;
   }
+
+
+
 }

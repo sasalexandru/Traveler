@@ -10,6 +10,8 @@
   <div class="list-group list-group-flush">
     <h5 class="card-title ; center">{{restaurant.restaurantName}}</h5>
     <p class="card-text; center">{{restaurant.restaurantAddress}}</p>
+    <iframe class="center" width="450" height="250" frameborder="0" style="border:0"
+             [src]="this.sanitizer.bypassSecurityTrustResourceUrl(trustedUrl + restaurant.restaurantAddress)"  allowfullscreen> </iframe>
     <a class="btn btn-primary ; center" (click)="onClick(restaurant)" >Go to restaurant</a>
 
   </div>
