@@ -26,7 +26,7 @@ export class HotelListComponent implements OnInit {
 
 
 
-  trustedUrl: string = "https://www.google.com/maps/embed/v1/place?key=AIzaSyCxGFSxwWPA45GzvGZxSK2KlKD_AI7vK6c&q=" ;
+  trustedUrl: string = "https://www.google.com/maps/embed/v1/place?key="replace with the key"&q=" ;
 
 
 
