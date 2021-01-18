@@ -13,6 +13,7 @@ import {CreateHotelComponent} from "./suggest/create-hotel/create-hotel.componen
 import {CreatePlaceComponent} from "./suggest/create-place/create-place.component";
 import {AboutComponent} from "./about/about.component";
 import {RestaurantsComponent} from "./restaurants/restaurants.component";
+import {CreateRestaurantComponent} from "./suggest/create-restaurant/create-restaurant/create-restaurant.component";
 
 const routes: Routes = [
   {path: 'user',  component: ListComponent},
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path: 'suggest-festival', component: CreateFestivalComponent},
   {path: 'suggest-hotel', component: CreateHotelComponent},
   {path: 'suggest-place', component: CreatePlaceComponent},
+  {path: 'suggest-restaurant', component: CreateRestaurantComponent},
   {path: 'about', component: AboutComponent},
   {path: 'restaurants', component: RestaurantsComponent},
 

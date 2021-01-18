@@ -5,33 +5,25 @@
 <div>
   <div class="container; boxed; blurred" style="border: 5px solid whitesmoke ">
 
-    <h1 class="demo-1" style="width: 55% ; margin-left: auto; margin-right: auto;">Suggest Hotel</h1>
+    <h1 class="demo-1" style="width: 45% ; margin-left: auto; margin-right: auto;">Suggest Restaurant</h1>
     <div class="form-group ">
       <div>
-        <input type="text" class="form-control" id="hotelName" placeholder="Hotel Name" [(ngModel)]="hotelName"
-               name="hotelName" />
+        <input type="text" class="form-control" id="restaurantName" placeholder="Restaurant Name" [(ngModel)]="restaurantName"
+               name="restaurantName" />
       </div>
     </div>
     <div class="form-group">
       <div>
-        <input  type="text" class="form-control" id="address" placeholder="Hotel Address" [(ngModel)]="address"
-               name="address" />
-      </div>
-    </div>
-
-    <div class="form-group">
-      <div>
-        <textarea style="height:200px;font-size:14pt;" type="text" class="form-control" id="hotelDescription" placeholder="Hotel Description" [(ngModel)]="hotelDescription"
-                  name="hotelDescription"> </textarea>
-<!--        <input style="height:200px;font-size:14pt;" type="text" class="form-control" id="hotelDescription" placeholder="Hotel Description" [(ngModel)]="hotelDescription"-->
-<!--               name="hotelDescription" />-->
+        <input  type="text" class="form-control" id="restaurantAddress" placeholder="Restaurant Address" [(ngModel)]="restaurantAddress"
+                name="restaurantAddress" />
       </div>
     </div>
 
+
     <div class="form-group">
       <div>
-        <input  type="text" class="form-control" id="hotelUrl" placeholder="Hotel URL" [(ngModel)]="hotelURL"
-                name="hotelUrl" />
+        <input  type="text" class="form-control" id="restaurantUrl" placeholder="Restaurant URL" [(ngModel)]="restaurantUrl"
+                name="restaurantUrl" />
       </div>
     </div>
     <!-- IMAGE UPLOAD -->
@@ -48,7 +40,7 @@
       </div>
       <br>
       <div>
-        <input type="button" class="btn btn-success" (click)="onUpload()" value="Suggest great accommodations!">
+        <input type="button" class="btn btn-success" (click)="onUpload()" value="Suggest great restaurants!">
       </div>
     </div>
     <hr />
@@ -76,6 +68,7 @@
   </div>
 
 </div>
+
 
 
 

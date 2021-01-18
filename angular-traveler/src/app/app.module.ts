@@ -23,6 +23,7 @@ import {TooltipModule} from "ngx-bootstrap/tooltip";
 import {ModalModule} from "ngx-bootstrap/modal";
 import { AboutComponent } from './about/about.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
+import { CreateRestaurantComponent } from './suggest/create-restaurant/create-restaurant/create-restaurant.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { RestaurantsComponent } from './restaurants/restaurants.component';
     CreatePlaceComponent,
     AboutComponent,
     RestaurantsComponent,
+    CreateRestaurantComponent,
 
   ],
   imports: [
